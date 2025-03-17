@@ -14,7 +14,7 @@ class TextToSpeech:
     def __init__(self, compartment_id):
         self.endpoint = "https://speech.aiservice.us-phoenix-1.oci.oraclecloud.com" # Only phoenix region has TTS, for now
         self.compartment_id = os.getenv("COMPARTMENT_ID")
-        self.voice_id = os.getenv("VOICE_ID")
+        self.voice_id = os.getenv("VOICE_ID") or "Annabelle"
         self.lock = threading.Lock()
         self.playing = False
         self.speech = None
@@ -49,7 +49,7 @@ class TextToSpeech:
                         model_family="ORACLE",
                         model_details=TtsOracleTts2NaturalModelDetails(
                             model_name="TTS_2_NATURAL", 
-                            voice_id="Annabelle"
+                            voice_id=self.voice_id
                         ),
                         speech_settings=TtsOracleSpeechSettings(
                             text_type="SSML", # SSML, just adjust speech rate

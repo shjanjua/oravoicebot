@@ -64,7 +64,6 @@ class VoiceChatbot:
         while not shutdown.is_set():
             try:
                 transcript = await self.speech.output_queue.get()
-                print(f"🤖 You: {transcript}\n")
                 self.conversation.queue_input(transcript)
             except:
                 await asyncio.sleep(0.1)
