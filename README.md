@@ -17,7 +17,6 @@ Before you begin, ensure you have the following:
 1. **Oracle Cloud Infrastructure Account:** You'll need an active OCI account to use the Generative AI and Speech services.
 2. **OCI API Key:**  Generate and configure an OCI API key. Refer to the [OCI documentation](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/apisigningkey.htm) for instructions on how to set up your API key and OCI CLI configuration file.
 3. **Python 3.8+:**  Make sure you have Python 3.8 or a later version installed on your system.
-4. **`pyaudio`:** Install `pyaudio` for audio input and output.  Installation might require system-level dependencies depending on your OS. 
 
 ## Installation
 
@@ -87,4 +86,4 @@ To stop the chatbot, press `Ctrl+C`.
 - `oci.ai-speech-realtime`
 - `python-dotenv`
 
-These dependencies are listed in `requirements.tst` and can be installed using `pip install -r requirements.tst`.
+These dependencies are listed in `requirements.txt` and can be installed using `pip install -r requirements.txt`.
