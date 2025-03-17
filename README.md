@@ -29,7 +29,7 @@ Before you begin, ensure you have the following:
 
 2. **Install dependencies:**
    ```bash
-   pip install -r requirements.tst
+   pip install -r requirements.txt
    ```
 
 3. **Configure environment variables:**
